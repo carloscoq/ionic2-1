@@ -4,6 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
 import { MenuTestPage } from '../pages/menu-test/menu-test';
+import {GeneratedTestPage} from '../pages/generated-test/generated-test';
 
 
 
@@ -18,7 +19,8 @@ export class MyApp {
   constructor(platform: Platform) {
     this.pages = [
       {component: HomePage, title: 'Home', icon: 'home'},
-      {component: MenuTestPage, title: 'Menu Test', icon: 'menu'}
+      {component: MenuTestPage, title: 'Menu Test', icon: 'apps'},
+      {component: GeneratedTestPage, title: 'Generated Page', icon: 'archive'}
     ];
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -29,7 +31,6 @@ export class MyApp {
   }
 
   openPage(page: any) : void{
-    console.log("indo para a pagina: "+page.component);
     this.rootPage = page.component;
   }
 }
